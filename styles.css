@@ -1,0 +1,268 @@
+:root {
+  --primary-color-1: hsl(14, 45%, 36%);
+  --primary-color-2: hsl(332, 51%, 32%);
+
+  --neutral-color-1: hsl(0, 0%, 100%);
+  --neutral-color-2: hsl(330, 100%, 98%);
+  --neutral-color-3: hsl(30, 54%, 90%);
+  --neutral-color-4: hsl(30, 18%, 87%);
+  --neutral-color-5: hsl(30, 10%, 34%);
+  --neutral-color-6: hsl(24, 5%, 18%);
+
+  --fs-paragraph: 0.5rem;
+
+  --fw-400: 400;
+  --fw-600: 600;
+  --fw-700: 700;
+}
+
+/* start CSS Reset */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+/* end CSS Reset  */
+
+body {
+  background-color: var(--neutral-color-3);
+  /*   padding: 1rem; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  font-family: /* Young Serif,  */ Outfit;
+  font-size: var(--fs-paragraph);
+  font-weight: var(--fw-400);
+  color: var(--neutral-color-5);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--neutral-color-1);
+  border-radius: 1rem;
+  padding: 1rem;
+  max-width: 20rem;
+  margin:2rem; 
+}
+
+.omlet-photo {
+  max-width: 100%;
+  border-radius: 0.5rem;
+}
+
+.preparation-box {
+  background-color: var(--neutral-color-2);
+  border-radius: 10px;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  text-align: left;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-weight: var(--fw-400);
+  /*   font-size: ; */
+  font-family: Young Serif;
+  /*   text-align: center; */
+  color: var(--neutral-color-6);
+  padding: 0.5rem 0rem 0.5rem 0rem;
+}
+h3 {
+  color: var(--primary-color-1);
+  font-weight: var(--fw-400);
+  /*   text-align: left; */
+  padding: 0px;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+  font-family: Young Serif;
+  font-size: small;
+  margin-bottom: 0rem;
+}
+
+h2 {
+  color: var(--primary-color-2);
+  margin-top: 0px;
+  font-size: 0.7rem;
+}
+
+p {
+  font-size: var(--fs-paragraph);
+  color: var(--neutral-color-5);
+  /* margin: 0.5rem;  */
+  font-weight: var(--fw-400);
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
+table {
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+td {
+  border-bottom: 1px solid var(--neutral-color-4);
+  padding: 0.3rem;
+}
+
+.digits {
+  color: var(--primary-color-1);
+  font-weight: var(--fw-700);
+  font-family: Outfit;
+}
+
+.nutrition {
+  font-weight: var(--fw-400);
+  color: var(--neutral-color-5);
+  font-family: Outfit;
+  padding-left: 1rem;
+}
+
+li {
+  padding: 0rem;
+  margin: 0.5rem;
+}
+
+ul {
+  padding: 0rem;
+  list-style-position: inside;
+}
+
+span {
+  font-weight: var(--fw-700);
+}
+
+ol {
+  border-bottom: 1px solid var(--neutral-color-4);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.ingredients {
+  border-bottom: 1px solid var(--neutral-color-4);
+  margin-bottom: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+ol ::marker {
+  color: var(--primary-color-2);
+  font-weight: var(--fw-600);
+}
+
+ol {
+  padding-left: 0.5rem;
+}
+.nutrition-text {
+  margin: 0.5rem 0rem 0.5rem 0rem;
+}
+
+
+ol li {
+  padding-left: 0.5rem;
+}
+
+@media only screen and (max-width: 400px) {
+  body {
+    padding: 0rem;
+    margin: 0rem;
+  }
+  main {
+    margin: 0rem;
+    padding: 0rem;
+    border-radius: 0rem;
+     }
+  
+    .text {
+      margin: 0rem 1rem 1rem 1rem;
+    }
+    .omlet-photo {
+      border-radius: 0rem;
+    }
+ 
+}
